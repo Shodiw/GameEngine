@@ -1,0 +1,15 @@
+# Enemy data file: id,x,y,health,aiType,scoreValue,textureId,modelId,soundId
+enemy_001,10.0,5.0,100,AGGRESSIVE,50,texture_orc,model_orc,sound_grunt
+enemy_002,-3.5,8.2,200,DEFENSIVE,80,texture_orc,model_orc,sound_grunt
+enemy_003,0.0,0.0,150,PATROL,60,texture_skeleton,model_skeleton,sound_rattle
+# invalid: missing fields
+INVALID_LINE_HERE
+# invalid: bad health
+enemy_bad,1.0,2.0,abc,AGGRESSIVE,10,tx,md,sd
+# invalid: unknown AI type
+enemy_bad2,1.0,2.0,100,UNKNOWN_AI,10,tx,md,sd
+# invalid: negative score
+enemy_bad3,1.0,2.0,100,PATROL,-5,tx,md,sd
+enemy_004,20.0,15.0,300,AGGRESSIVE,120,texture_troll,model_troll,sound_roar
+# same textures as enemy_001 and enemy_002 - will reuse Flyweight
+enemy_005,5.0,3.0,80,PATROL,30,texture_orc,model_orc,sound_grunt
